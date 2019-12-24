@@ -33,10 +33,10 @@ class GameOverFragment : Fragment() {
         val binding: FragmentGameOverBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_over, container, false)
 
-        binding.tryAgainButton.setOnClickListener { view: View->
-            view.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment)
-            Toast.makeText(activity,"Start over again!!!", Toast.LENGTH_LONG).show()
+        binding.tryAgainButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(GameOverFragmentDirections.actionGameOverFragmentToGameFragment())
         }
-        return binding.root
+            return binding.root
+
     }
 }
