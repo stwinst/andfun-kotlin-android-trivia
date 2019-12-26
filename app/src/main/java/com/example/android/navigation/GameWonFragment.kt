@@ -49,14 +49,14 @@ class GameWonFragment : Fragment() {
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain")
                 .putExtra(Intent.EXTRA_TEXT, getString(R.string.share_success_text, args.numCorrect, args.numQuestions))
-
+        return shareIntent
         //Another way
         /* return ShareCompat.IntentBuilder.from(activity)
                 .setText(getString(R.string.share_success_text, args.numCorrect, args.numQuestions))
                 .setType("text/plain")
                 .intent
         */
-        return shareIntent
+
     }
 
     // Starting an Activity with our new Intent
